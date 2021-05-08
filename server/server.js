@@ -12,7 +12,7 @@ dotenv.config();
 const PORT = 5000;
 
 //connect to DB
-// uri - "mongodb+srv://anurag:anuraganurag@cluster0.ofl6t.mongodb.net/splitwiseAppClone?retryWrites=true&w=majority"
+
 mongoose
   .connect(process.env.DB_LOCAL, {
     useNewUrlParser: true,

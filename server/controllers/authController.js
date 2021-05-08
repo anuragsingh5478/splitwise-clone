@@ -46,8 +46,7 @@ module.exports.loginUser = async (req, res) => {
   const validPass = await bcrypt
     .compare(req.body.password, user.password)
     .catch((err) => res.status(400).send(err));
-  if (!validPass)
-    return res.status(400).send("email and password does not match");
+  if (!validPass) return res.send({ msg: "email and password does not match" });
 
   // Create and Assign a Token
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);

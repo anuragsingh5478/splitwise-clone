@@ -18,8 +18,12 @@ export default function Login({ setToken }) {
     axios
       .post("http://localhost:5000/api/user/login", user)
       .then((res) => {
-        setErrorMsg(res.data.msg);
-        setToken(res.data.token);
+        console.log(res.data);
+        const msg = res.data.msg;
+        if (msg === "success") {
+          setErrorMsg(msg);
+          setToken(res.data.token);
+        } else setErrorMsg(msg);
       })
       .catch((err) => console.log(err));
   };
