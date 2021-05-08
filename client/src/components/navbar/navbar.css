@@ -1,0 +1,22 @@
+.navbar {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: slateblue;
+}
+.navbar > a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.navbar > a:hover {
+  color: wheat;
+}
+
+.navbar > button {
+  background-color: aliceblue;
+  color: slateblue;
+  padding: 10px 20px;
+}
